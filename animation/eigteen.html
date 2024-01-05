@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 95vh;
+            display: grid;
+            place-items: center;
+            background-color: lightslategrey;
+        }
+
+        .conatiner {
+            min-width: 80%;
+        }
+
+        .conatiner>div {
+            --color: linear-gradient(45deg, yellow, blue);
+            background: var(--color);
+            min-height: 30px;
+            margin-bottom: -0.1rem;
+            box-shadow: 2px 2px 15px rgb(57, 31, 4);
+            transition: margin-bottom 500ms linear;
+        }
+        .conatiner:hover>div
+       {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

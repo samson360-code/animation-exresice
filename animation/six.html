@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+.container{
+    display: flex;
+    gap: 0.5rem;
+}
+.container>*{
+    height:1rem;
+    width: 1rem;
+    background-color: black;
+    border-radius: 50%;
+    animation: size 1s linear  infinite alternate-reverse;
+}
+
+@keyframes size{
+    100%{
+        transform: scale(0.3);
+    }
+}
+.container>div:nth-child(2){
+    animation-delay:333ms;
+}
+.container>div:last-child{
+    animation-delay: 666ms;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+<div></div>
+<div></div>
+<div></div>
+    </div>
+</body>
+</html>

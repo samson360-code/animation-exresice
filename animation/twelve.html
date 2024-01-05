@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        :root {
+            font-size: 10px;
+
+        }
+
+        main {
+            width: 25rem;
+            height: 25rem;
+            padding: 2rem;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            border: 0.5px solid black;
+            background-color:rgb(248, 247, 247);
+            
+
+        }
+        .profile {
+            display: flex;
+            gap: 2rem;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .profile>* {
+            flex: 1;
+
+
+        }
+
+        .avatar {
+            border-radius: 50%;
+            height: 100%;
+
+        }
+
+        .person {
+            width: 100%;
+        }
+
+        .person>*,
+        .body>*,
+        .footer>* {
+            min-height: 0.5rem;
+            margin-block: 1rem;
+            border-radius: 1rem;
+            animation-fill-mode: forwards;
+
+        }
+
+        .name {
+            max-width: 50%;
+            animation-delay: 1s;
+        }
+
+        .other {
+            max-width: 100%;
+            animation-delay: 2s;
+
+        }
+
+        .body>div:nth-child(1) {
+            width: 80%;
+        }
+
+        .body>div:nth-child(2) {
+            width: 100%;
+        }
+
+        .body>div:nth-child(3) {
+            width: 50%;
+        }
+
+        .footer {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer>* {
+            flex: 1;
+        }
+
+        .avatar,
+        .person>*,
+        .body>*,
+        .footer>* {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .avatar::before,
+        .person>*::before,
+        .body>*::before,
+        .footer>*::before {
+            position: absolute;
+            content: '';
+            inset: 0;
+            animation: background-color 1.3s infinite;
+            animation-timing-function: linear;
+            background-image: linear-gradient(to right, #d9d9d9 0%, rgba(0, 0, 0, 0.05) 20%, #d9d9d9 40%, #d9d9d9 100%);
+          /* i dont know how but this a lot */
+            background-size: 10rem; 
+        }
+
+        .avatar::before {
+            animation-delay: 300ms;
+        }
+
+        .person>*::before {
+            animation-delay: 400ms;
+
+        }
+
+        .body>*::before {
+            animation-delay: 100ms;
+
+        }
+
+        .footer>*::before {
+            animation-delay: 500ms;
+
+        }
+        @keyframes background-color {
+            0% {
+                background-position: -10rem 0;
+            }
+
+            100% {
+                background-position: 10rem 0;
+
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <main>
+        <div class="profile">
+            <div class="avatar"></div>
+            <div class="person">
+                <div class="name"></div>
+                <div class="other"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer">
+            <div></div>
+            <div></div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

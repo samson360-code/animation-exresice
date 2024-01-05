@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+.logo-holder{
+ display: flex;
+ flex-direction: column;
+ gap: 0.4rem;
+}
+.logo-holder>*{
+ height: 0.3rem;
+ width: 5rem;
+ border-radius: 5px;
+ border-bottom-left-radius: 0;
+ border-top-left-radius: 0;
+ background-color:darkgray;
+ animation: load 10s linear  infinite alternate-reverse;
+ transform-origin:left ;
+}
+
+.logo-holder>div:nth-child(1),
+.logo-holder>div:nth-child(2),
+.logo-holder>div:nth-child(4){
+    animation-delay: 100ms;
+}
+
+.logo-holder>div:nth-child(7),
+.logo-holder>div:nth-child(3),
+.logo-holder>div:nth-child(5){
+    animation-delay: 300ms;
+}
+.logo-holder>div:nth-child(6),
+.logo-holder>div:nth-child(9){
+    animation-delay: 700ms;
+}
+
+
+
+
+
+
+
+
+@keyframes load{
+0%,12%,40%,85%
+{
+transform: scaleX(0);
+}
+10%,70%,33%
+
+{
+transform: scaleX(0.3);
+}
+25%,67%,8%
+
+{
+transform: scaleX(0.8);
+}
+30%,95%,22%
+
+{
+transform: scaleX(1.2);
+}
+32%,55%,5%
+
+{
+transform: scaleX(1.5);
+}
+80%,45%,23%,90%
+
+{
+transform: scaleX(1.8);
+}
+30%,100%
+
+{
+transform: scaleX(2);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+
+
+
+</head>
+<body>
+    <div class="logo-holder">
+        <div class="bg"></div>
+        <div class="bar"></div>
+        <div class="bar fill1"></div>
+        <div class="bar fill2"></div>
+        <div class="bar fill3"></div>
+        <div class="bar fill4"></div>
+        <div class="bar fill1"></div>
+        <div class="bar fill5"></div>
+        <div class="bar fill6"></div>
+        <div class="bar"></div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            height: 100px;
+            width: 200px;
+            background-color: aqua;
+            border-radius: 12%;
+            margin: auto;
+            animation-name: one;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-direction: alternate;
+        }
+
+        @keyframes one {
+            0% {
+                transform: scaleX(1);
+            }
+
+            100% {
+                transform: scaleX(2) translateY(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

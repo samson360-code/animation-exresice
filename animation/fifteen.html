@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;   
+        }
+        .loader {
+            position: relative;
+            width: 17rem;
+            height: 16rem;
+        }
+        .loader>* {
+            position: absolute;
+            display: block;
+            height: 2rem;
+            width: 2rem;
+            animation: roll 3s linear infinite;
+            transform-origin: bottom;
+            box-shadow: 0 0 10px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 160px #0f0;
+        }
+
+        @keyframes roll {
+
+            0%,
+            1% {
+                transform: translate(0, 10rem);
+                background-color: RED;
+            }
+
+            25%,
+            26% {
+                transform: translate(0rem, 0rem);
+                background-color: blue;
+
+            }
+
+            50%,
+            51% {
+                transform: translate(10rem, 0rem);
+                background-color: yellow;
+
+            }
+
+            72% {
+                transform: translate(10rem, 8rem) scaleY(1);
+            }
+
+            75%,
+            76% {
+                transform: translate(10rem, 10rem) scaleY(0.5);
+                background-color: aqua;
+            }
+            80% {
+                transform: translate(8rem, 10rem) scaleY(1);
+            }
+
+            99%,
+            100% {
+                transform: translateY(10rem);
+                background-color: green;
+                filter: hue-rotate(350deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <span style="--i:7;animation-delay: 3000ms;"></span>
+        <span style="--i:0; animation-delay: 2625ms;"></span>
+        <span style="--i:1;animation-delay: 2250ms;"></span>
+        <span style="--i:2;animation-delay: 1875ms;"></span>
+        <span style="--i:3;animation-delay: 1500ms;"></span>
+        <span style="--i:4;animation-delay: 1125ms;"></span>
+        <span style="--i:5;animation-delay: 750ms;"></span>
+        <span style="--i:6;animation-delay: 375ms;"></span>
+        <span style="--i:7;animation-delay: 0ms;"></span>
+
+
+    </div>
+</body>
+
+</html>

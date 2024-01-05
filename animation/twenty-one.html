@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightslategrey;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 22rem;
+            width: 32rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 900px;
+            transition: perspective 1s linear;
+        }
+
+        .box {
+            height: 12rem;
+            width: 12rem;
+            transform-style: preserve-3d;
+            transform:rotateZ(200deg)
+
+        }
+
+        .box>div {
+            position: absolute;
+            height: 12rem;
+            width: 12rem;
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid lightgoldenrodyellow;
+        }
+
+        .box>div:nth-child(1) {
+
+            background-color: blue;
+            transform: translatey(-50%) rotatex(90deg);
+        }
+
+        .box>div:nth-child(2) {
+            background-color: yellow;
+            transform: translateX(50%) rotateY(90deg);
+
+        }
+
+        .box>div:nth-child(3) {
+            background-color: red;
+            transform: translatey(50%) rotatex(-90deg);
+        }
+
+        .box>div:nth-child(4) {
+            background-color: cornflowerblue;
+            transform: translateX(-50%) rotateY(-90deg);
+
+        }
+
+        .box>div:nth-child(5) {
+            transform: translateZ(-6rem) rotateY(180deg);
+            background-color: white;
+            color: black;
+        }
+
+        .box>div:nth-child(6) {
+            transform: translateZ(6rem);
+            background-color: black;
+        }
+
+        button {
+            font-size: 2rem;
+            padding: 2rem 4rem;
+            background-color: lightblue;
+            position: relative;
+            color: blue;
+            border: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            /* margin: 1rem; */
+        }
+
+        button>div {
+            display: grid;
+            place-items: center;
+            position: absolute;
+            inset: 0;
+            background-color: lightseagreen;
+            color: black;
+            transform: translateX(-100%);
+            transition: transform 500ms linear;
+        }
+
+        button:hover>div {
+            transform: translateX(0%);
+
+        }
+
+        button:hover~.container>.box {
+            animation: rotate 2.5s infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotatey(45deg) rotateX(-45deg);
+            }
+
+            25% {
+                transform: rotateY(-45deg) rotateX(-45deg);
+            }
+
+            50% {
+                transform: rotatey(-45deg) rotateX(45deg);
+            }
+
+            75% {
+                transform: rotatey(45deg) rotateX(45deg);
+            }
+
+            100% {
+
+                transform: rotatey(145deg) rotateX(-45deg);
+            }
+        }
+
+
+        button:focus~.container>.box>#top {
+            transform: translateY(-7rem) rotatex(90deg);
+        }
+
+        button:focus~.container>.box>#right {
+            transform: translatex(7rem) rotatey(90deg);
+        }
+
+        button:focus~.container>.box>#bottom {
+            transform: translateY(7rem) rotatex(-90deg);
+        }
+
+        button:focus~.container>.box>#left {
+            transform: translatex(-7rem) rotatey(-90deg);
+        }
+
+        button:focus~.container>.box>#back {
+            transform: translatez(-7rem) rotateY(180deg);
+        }
+
+        button:focus~.container>.box>#front {
+            transform: translatez(7rem) rotatez(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        <div>click me</div>hover me
+    </button>
+    <div class="container">
+        <div class="box">
+            <div id="top">top</div>
+            <div id="right">right</div>
+            <div id="bottom">bottom</div>
+            <div id="left">left</div>
+            <div id="back">back</div>
+            <div id="front">front</div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

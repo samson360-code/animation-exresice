@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+         width: 70px;
+    height: 225px;
+            position: relative;
+        }
+
+        .container>div:nth-child(2)::before {
+            position: absolute;
+            background-color: white;
+            height: 1rem;
+            width: 1rem;
+            bottom: 1rem;
+            translate: 100%;
+            border-radius: 50%;
+            z-index: 99999999999;
+        }
+
+        .container>*:not(div:first-child) {
+            position: absolute;
+            inset: 0;
+            background-color: aqua;
+            border-radius: 1rem;
+            box-shadow: 1px 1px 0.4px white;
+        }
+
+        .container>div:nth-child(2) {
+            animation: rotate-one 1s cubic-bezier(0.4, 0.0, 0.2, 1)  infinite alternate-reverse forwards;
+            animation-delay: 2s;
+            background-color: blue;
+        }
+
+        @keyframes rotate-one {
+            to {
+                transform-origin: bottom;
+                transform: rotate(-60deg);
+            }
+        }
+        
+        .container>div:nth-child(3) {
+            background-color: brown;
+            animation: rotate-two 1s cubic-bezier(0.4, 0.0, 0.2, 1)  infinite alternate-reverse forwards;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes rotate-two {
+            to {
+                transform-origin: center 90%;
+                transform: rotate(-45deg);
+            }
+        }
+        .container>div:nth-child(4) {
+            background-color: coral;
+            animation: rotate-three 1s cubic-bezier(0.4, 0.0, 0.2, 1)  infinite alternate-reverse forwards;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes rotate-three {
+            to {
+                transform-origin: center 90%;
+                transform: rotate(-15deg);
+            }
+        }
+        .container>div:nth-child(5) {
+            background-color: chartreuse;
+            animation: rotate-four 1s cubic-bezier(0.4, 0.0, 0.2, 1)  infinite alternate-reverse forwards;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes rotate-four {
+            to {
+                transform-origin: center 90%;
+                transform: rotate(15deg);
+            }
+        }
+        .container>div:nth-child(6) {
+            background-color: darkgoldenrod;
+            animation: rotate-five 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate-reverse forwards;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes rotate-five {
+            to {
+                transform-origin: center 90%;
+                transform: rotate(45deg);
+            }
+        }
+        .container>div:nth-child(7) {
+            background-color: dimgray;
+            animation: rotate-six 1s cubic-bezier(0.4, 0.0, 0.2, 1)  infinite  alternate-reverse forwards;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes rotate-six {
+            to {
+                transform-origin: center 90%;
+                transform: rotate(60deg);
+            }
+        }
+        
+        
+
+     
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

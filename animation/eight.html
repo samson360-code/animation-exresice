@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            max-width: 100%;
+            overflow: hidden;
+
+
+        }
+        main>div {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            text-transform: uppercase;
+            transition: transform 300ms linear;
+        }
+p{
+    transition: transform 300ms linear;
+}
+        div:nth-child(1) {
+            background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/desert.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(2) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/forest.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(3) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/canyon.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(4) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/glacier.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(5) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/mountains.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(6) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/beach.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(7) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/fries.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div:nth-child(8) {
+            background: url(https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/falls.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main>div:hover {
+            transform: scale(1.2);
+        }
+
+        main>div:hover p {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <p>desert</p>
+        </div>
+        <div>
+            <p>forest</p>
+        </div>
+        <div>
+            <p>canyon</p>
+        </div>
+        <div>
+            <p>glacier</p>
+        </div>
+        <div>
+            <p>mountains</p>
+        </div>
+        <div>
+            <p>beach</p>
+        </div>
+        <div>
+            <p>fries</p>
+        </div>
+        <div>
+            <p>falls</p>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .intro-text>*{
+ opacity: 0;  
+        }
+        p{
+            animation: boom  0.5s ease forwards;
+        }
+        h1{
+            animation: boom  0.5s ease forwards;
+            animation-delay:0.5s;
+        }
+        button{
+            animation: boom  0.5s ease forwards;
+            animation-delay: 1s;
+        }
+        @keyframes boom{
+            from{
+                transform: translateY(250px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-text">
+        <p>Good Morning!</p>
+        <h1>Welcome to my website.</h1>
+        <button>Contact us</button>  
+      </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(11, 1, 20);
+            height: 95vh;
+            display: grid;
+            place-items: center;
+        }
+
+        main {
+            display: grid;
+            place-items: center;
+            background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
+            background-repeat: no-repeat;
+            border: 1px solid blue;
+            box-shadow: 0.5px 0.5px 8px blue;
+            padding-block: 3rem;
+            width: 43rem;
+            height: 400px;
+        }
+
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            outline: 2px solid blueviolet;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+
+        }
+
+        .container {
+            color: white;
+            text-align: center;
+            border: 0.5px solid yellow;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 1rem;
+            padding: 2rem;
+            padding-bottom: 4rem;
+
+        }
+
+        span {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: aqua;
+            ---second: 4s
+        }
+
+        span:nth-child(1) {
+            top: 0;
+            left: 0;
+            animation: border-one 2s infinite;
+            transform-origin: left;
+
+        }
+
+        span:nth-child(2) {
+            top: 0;
+            right: 0;
+            animation: border-two 2s infinite;
+            transform-origin: top;
+
+        }
+
+        span:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            animation: border-three 2s infinite;
+            transform-origin: left;
+
+        }
+
+
+        span:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            animation: border-four 2s infinite;
+            transform-origin: top;
+        }
+
+        @keyframes border-one {
+            0% {
+                transform: scaleX(0);
+            }
+
+            50% {
+                transform: scaleX(193.5);
+
+            }
+
+            100% {
+                transform: translateX(calc(2*170.5px));
+            }
+        }
+
+        @keyframes border-two {
+            0% {
+                transform: scaley(0);
+            }
+
+            50% {
+                transform: scaley(153.5);
+
+            }
+
+            100% {
+                transform: translatey(calc(2*136.5px));
+            }
+        }
+
+        @keyframes border-three {
+            0% {}
+
+            50% {
+                transform: scaleX(-193.5);
+
+            }
+
+            100% {
+                transform: translatex(-342px);
+            }
+        }
+
+        @keyframes border-four {
+            0% {
+
+                transform: scaley(0);
+
+            }
+
+            50% {
+                transform: scaley(-153.5);
+
+            }
+
+            100% {
+                transform: translatey(-274px);
+            }
+        }
+    </style>
+</head>
+
+<body></body>
+<main>
+    <div class="wrapper">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+            <h4>My animated Border</h4>
+            <p> All our modules are designed to play nicely with responsive of course. At the end of the day it comes
+                down to the theme you use - our code doesn't get in your way.</h1>
+            </p>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+</body>
+
+</html>
